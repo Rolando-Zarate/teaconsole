@@ -18,7 +18,11 @@ int main(){
         if ((strlen(inp) > 0) && (inp[strlen(inp) -1] == '\n')){
             inp[strlen(inp) -1]  = '\0';
         }
-        system(inp);
+        if (strcmp(inp,"exit tea") == 0){
+            exit(0);
+        }else{
+            system(inp);
+        }
         free(inp);
     }
     return 0;
